@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 19</title>
+    <style>
+      .highlight {
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="itemList">
+      <li>Arfa</li>
+      <li>Banyu</li>
+      <li>Santoro</li>
+      <li>Sangat</li>
+      <li>Tampan</li>
+      <li>Dan</li>
+      <li>Pemberani</li>
+    </ul>
+
+    <label>
+      Warna Elemen Genap
+      <select id="genap" oninput="handleGenap()">
+        <option value="">Pilih</option>
+        <option value="blue">Biru</option>
+        <option value="green">Hijau</option>
+        <option value="yellow">Kuning</option>
+      </select>
+    </label>
+    <br />
+    <label>
+      Warna Elemen Ganjil
+      <select id="ganjil" oninput="handleGanjil()">
+        <option value="">Pilih</option>
+        <option value="red">Merah</option>
+        <option value="brown">Coklat</option>
+        <option value="pink">Pink</option>
+      </select>
+    </label>
+
+    <script>
+      const lis = document.querySelectorAll("li");
+      const form = document.querySelector("form");
+
+      function handleGenap() {
+        let i = 1;
+        while (i < lis.length) {
+          lis[i].style.color = genap.value;
+          i += 2;
+        }
+      }
+      function handleGanjil() {
+        let i = 0;
+        while (i < lis.length) {
+          lis[i].style.color = ganjil.value;
+          i += 2;
+        }
+      }
+    </script>
+  </body>
+</html>
